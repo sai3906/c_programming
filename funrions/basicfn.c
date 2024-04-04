@@ -1,3 +1,7 @@
+#first prototype
+#in main function the function is called
+#after main function  the defination of function is defined
+
 #include<stdio.h>
 void msg();
 int main()
