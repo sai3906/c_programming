@@ -8,7 +8,7 @@ int main(){
 
     int *ptr;
 
-    ptr=&a;
+    ptr=&a[0][0];
     //this means ptr is pointing to a[0]'s base address of array
 
     //ptr=&a[0][0];
@@ -16,16 +16,17 @@ int main(){
 
 
     //from here 1
+    printf("address of begining of array:\n");
+
     printf("%p \n",a);
-    //array name itself points to the first element a[0]  base address
+    //array name itself points to the first element a[0] array  base address
 
     printf("%p \n",&a);
-    //the base address of complete array
+    //the base address of ~complete array~
+    //can be read as address of array a
 
     printf("%p \n",a[0]);
-    //a[0] is the array i.e first row of the array .
-    //since it is treated a seperate array it follow 1D array property. 
-    //i.e array name itself stores the base address of its first element
+    //a[0] is the 1_D array ,it stores the base address of its first element
     //so it returns base of address of a[0]
     
     printf("%p \n",&a[0][0]);
@@ -33,7 +34,7 @@ int main(){
 
     printf("%p \n",*a);
     //a stores the first element a[0]'s base address 
-    //*a gives  element at that address.so a it stores base address of a
+    //*a gives  element at that address.so it stores base address of a
 
     printf("%p \n",ptr);
     //pointer ptr stores the base addres array a
@@ -46,6 +47,7 @@ int main(){
 
 
     //from here 2
+    printf("second element of the array\n");
     printf("%p\n",a+1);
     //a itself points to first element a[0]'s base address 
     //so a+1 gives next element a[1]'s base address
@@ -74,8 +76,9 @@ int main(){
 
     //from here 3
     printf("a[3] or end of array\n");
-    printf("%p\n",(&a+1));
-    //&a stores the address of entire array base address
+    printf("%p\n",&a+1);
+    //&a is the address of complete array
+    //+1 adds the (1*(size of array)) 
     //&a+1 gives address of next address after array a
 
     printf("%p\n",a+3);
@@ -86,24 +89,42 @@ int main(){
     //everything in 3 prints the same
     printf("\n");
 
+
+
+
+
+    //from here 4
+    printf("a[0][2] address:\n");
+    printf("%p\n",(*a+2));
+    //a stores the base address of {a[0]} as 1_D array
+    //*a gives the stored addres of a[0]'s base address
+    //+2 adds the (2*(size first element of a[0] ))
+    
+    printf("%p\n",&a[0][2]);
+
+    //end here 4
+    printf("\n");
+
+
+
+
     for (int m = 0; m < 3; m++)
     {
         for (int n = 0; n < 3; n++)
         {
-            printf("%p\t",&a[m][n]);
+            printf("a[%d][%d]::%p \t\t",m,n,&a[m][n]);
         }
         printf("\n");
     }
     
     printf("\n");
-    //from here 4
-    printf("%p\n",(*a+1));
-    //a stores the a[0]'s address
-    //a+1 stores the a[1]'s address
-    //* 
 
-    //printf("%p\n",&a[0][2]);
-    //end here 4
 
+
+
+
+//a[i][j]=*(*(a+i)+j)
+//a[i]=*(a+i)
+//so a[i][j]=*(a[i]+j)
 
 }
