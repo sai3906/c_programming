@@ -1,7 +1,7 @@
 #include<stdio.h>
 int sum();//function declaration
 //if we dont write anything in funcation argument,if we provide arguments it wont give any error
-//it assumes default return type is int
+//it assumes default return type as int
 //so it is better to write void in function declaration argument --> it wont take any arguments now-->which is good in one way
 
 
