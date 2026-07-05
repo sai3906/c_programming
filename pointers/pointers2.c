@@ -7,22 +7,22 @@ int main(){
     //here  in k we are storing address of j which is address of i
     //so we  need ** while declaring variables
     //*k will giveb you error as assignmnet from incomplete pointer  type
-    printf("i address %u \n",&i);
-    printf("i address %u \n",j);
-    printf("i address %u \n \n",*k);
+    printf("i address %p \n",&i);
+    printf("i address %p \n",j);
+    printf("i address %p \n \n",*k);
 
-    printf("j address %u \n",&j);
-    printf("j address %u \n\n",k);
+    printf("j address %p \n",&j);
+    printf("j address %p \n\n",k);
 
-    printf("k address %u \n\n",&k);
+    printf("k address %p \n\n",&k);
 
-    printf("j value %u \n",j);
-    printf("k value %u \n",k);
+    printf("j value %p \n",j);
+    printf("k value %p \n",k);
     printf("i address %d \n\n",i);
 
-    printf("i value %u \n",*&i);
-    printf("i value %u \n",*j);
-    printf("i value %u \n",**k);
+    printf("i value %d \n",*&i);
+    printf("i value %d \n",*j);
+    printf("i value %d \n",**k);
     return 0;
 
 }

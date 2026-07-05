@@ -1,4 +1,4 @@
-include<stdio.h>
+#include<stdio.h>
 void copy_i(int);
 int main(){
   int a;
@@ -14,8 +14,7 @@ void copy_i(int a){
     return;
   }
   else{
-    a--;
     //printf("calling function %d \n",a);
-    copy_i(a);
+    copy_i(a-1);
   }
 }

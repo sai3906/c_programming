@@ -14,9 +14,9 @@ int main(){
     //
     for(int i=0;i<2;i++){
         for(int j=0;j<3;j++){
-            //printf("%d\t",c[i][j]);
+            printf("%d\t",c[i][j]);
         }
-    //    printf("\n");
+        printf("\n");
     }
 
     printf("%d\n",c[1][1]);
