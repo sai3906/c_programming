@@ -1,40 +1,43 @@
 #include<stdio.h>
-int arr_rev(int a[],int );
+int arr_rev(int a[],int,int );
 int main(){
-  int a[]={0,1,2,3,4,5,6};
-  /*
+  int a[]={10,20,30,40,50};
+  int len = sizeof(a)/sizeof(a[1]);
+  printf("\na=%p len=%d\n",a,len);
+//  printf("%d ",*a);
+//  printf("%d ",*a+1);
+//  printf("%d\n",*(a+1));
+//  arr_rev(a,len,0);
+}
+
+int arr_rev(int *b,int len,int i){
+//  for(int k=0;k<len;k++){
+//    printf("%d ",b[len-1-k]);
+//  }
+  printf("\n");
+  int rev[len];
+  rev[0]=*(b+len-1);
+  printf("%d ",*rev);
+  
+  rev[1]=*(b+len-2);
+  printf("%d ",*(rev+1));
+  
+  rev[2]=*(b+len-3);
+  printf("%d ",*(rev+2));
+  printf("\n");
+  printf("\n");
+
+//  if((len-i)>0){
+//    printf("%d ",*(rev+i));
+//    arr_rev(rev+len-i,len,i+1); 
+//  }
+//  for(int k=0;k<len;k++){
+//    printf("%d ",rev[k]);
+//  }
+  printf("\n");
+}
+
+/*
   int a[] = int *a
   this pointer points to a[0] 
-  */
-  int len = sizeof(a)/sizeof(a[1]);
-  arr_rev(a,len);
-}
-
-
-int arr_rev(int *b,int len){
-  printf("in rev fun\n");
-  printf("len of b=%d\n",len);
-  for(int i=0;i<len;i++){
-    printf("%d ",*(b+i));
-  }
-  printf("\n");
-  int k;
-  int j=0;
-  int rev[len];
-  int rev1[len];
-  while(j<len){
-    rev[len-j-1]=b[j];
-    j++;
-    //printf("%d ",rev[len-1]);
-  }
-
-  printf("\n");
-
-//  arr_rev(&rev1[len-k-1],len);
-
-
-  for(int i=0;i<len;i++){
-    printf("%d ",rev[i]);
-  }
-  printf("\n");
-}
+*/
