@@ -21,4 +21,10 @@ void main(){
   
   int y[11/2];  //since 11/2 is 5 ,it works
   printf("size=%ld bytes\n",sizeof(y));
+
+  int z[0]; //it also working
+  z[0]=9;
+  printf("size=%ld bytes\n",sizeof(z));
+  printf("z[0]=%d \n",z[0]);
+
 }
