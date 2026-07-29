@@ -22,7 +22,7 @@ int main(){
     int *ptr=&arr[0];       //we can do *ptr=&arr; both are same
 
     for(int m=0;m<5;m++){
-        printf("ptr+%d=%p \t *(ptr+%d)=%d\n",m,ptr+m,m,*(ptr+m));
+        printf("ptr+%d=%p \t *(ptr+%d)=%d \n ",m,ptr+m,m,*(ptr+m));
     }
 
 
